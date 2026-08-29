@@ -40,8 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# OpenNext
-.open-next
+# OpenNext build output is committed so `npx wrangler deploy` works even when
+# the Cloudflare project's build command is "None". Only the incremental-cache
+# subfolder is regenerated on demand and stays out of git.
+.open-next/cache/
 
 # wrangler files
 .wrangler
